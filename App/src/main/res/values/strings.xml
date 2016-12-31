@@ -1,0 +1,5 @@
+<resources>
+    <string name="AppName">Mobile Contacts Lib</string>
+    <string name="title_activity_display_contact">Contact Details</string>
+    <string name="action_settings">Settings</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="lavender">#FFE6E6FA</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#FFE8E8E8 </color>
+    <color name="greytext">#FF666666</color>
+    <color name="greybackground">#FFE4E4E4</color>
+    <color name="grey_greenish_background">#FF7F7F7F</color>
+    <color name="greylight">#FFf0f0f0</color>
+    <color name="menublue">#FF66b2ff</color>
+    <color name="bluegrey_logo_background">#ffD9DCF0</color>
+    <color name="green">#FF88D8B0</color>
+    <color name="honeydew">#FFF0FFF0</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="purple">#FF9f82d2</color>
+    <color name="greymedium">#FFa0a0a0</color>
+    <color name="greymediumdark">#ff929292</color>
+    <color name="spinner_text_color">#FF666666</color>
+    <color name="grey_icon">#FF737373</color>
+
+</resources>
