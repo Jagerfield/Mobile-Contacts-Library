@@ -69,7 +69,6 @@ public class ImportContacts
 
         if (!flag)
         {
-            Toast.makeText(activity, "Missing permission READ_CONTACTS", Toast.LENGTH_LONG).show();
             Log.i(Utilities.TAG_CONTACTS_LIB, "Missing permission READ_CONTACTS");
             return new ArrayList<Contact>();
         }
