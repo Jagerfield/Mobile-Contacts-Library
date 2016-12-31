@@ -1,6 +1,6 @@
 # Mobile Contacts Library
 
-This application demonstrates the "MobileContactsLib", The library uses the "ContentResolver", it is a well structured, fast, easy to use and easy to modify library for getting contacts from the mobile. 
+This application demonstrates the "MobileContactsLib", The library uses the "ContentResolver", it is a well structured, fast, easy to use and easy to modify library for getting contacts from the mobile. This library requires minimum SDK 17.
 
 Images from the app:
 
@@ -30,7 +30,7 @@ In the app build.gradle add the following:
  
     ```java
     dependencies {
-	        compile 'com.github.Jagerfield:Mobile-Contacts-Library:v1.0'
+	        compile 'com.github.Jagerfield:Mobile-Contacts-Library:v1.1'
 	}
   
     ```
