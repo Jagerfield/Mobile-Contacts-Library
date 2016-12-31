@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.database.Cursor;
 import android.provider.ContactsContract;
+import android.util.Log;
 import android.widget.Toast;
 
 import jagerfield.mobilecontactslibrary.FieldContainer.FieldsContainer;
@@ -69,6 +70,7 @@ public class ImportContacts
         if (!flag)
         {
             Toast.makeText(activity, "Missing permission READ_CONTACTS", Toast.LENGTH_LONG).show();
+            Log.i(Utility.TAG_LIB, "Missing permission READ_CONTACTS");
             return new ArrayList<Contact>();
         }
                 

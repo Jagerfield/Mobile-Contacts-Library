@@ -7,6 +7,8 @@ import jagerfield.mobilecontactslibrary.Abstracts.ElementParent;
 
 public class Utility
 {
+    public static final String TAG_LIB = "TAG_LIB";
+
     public static String getColumnIndex(Cursor c, String column)
     {
         String result = "";
