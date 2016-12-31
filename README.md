@@ -1,8 +1,8 @@
 # Mobile Contacts Library
 
-This is a sample application to demonstrates the "ContactsImportLib", a well structured, fast, easy to use and to modify library for getting contacts from the mobile. The library uses the "ContentResolver".
+This application demonstrates the "MobileContactsLib", The library uses the "ContentResolver", it is a well structured, fast, easy to use and easy to modify library for getting contacts from the mobile. 
 
-Images from the sample app:
+Images from the app:
 
 <img src="https://github.com/Jagerfield/Android-get-phone-book-contact-library/blob/master/Snapshots/Screenshot_ContactList.png" width="240">
 
@@ -10,14 +10,13 @@ Images from the sample app:
 
 ## Installation
 
-1. In the app manifest file add : 
+In the app manifest file add this permission: 
 
   ```java
   <uses-permission android:name="android.permission.READ_CONTACTS" />
  
   ``` 
-2. You can either download the code for this project and from it import the "ContactsImportLib" module into your project. 
-3. Or, in the app build.gradle add the following:
+In the app build.gradle add the following:
 
   a. Add JitPack repository at the end of repositories 
 
@@ -27,11 +26,11 @@ Images from the sample app:
     }
 
     ```
-  b. Add the dependency
+  b. Then add this dependency
  
     ```java
     dependencies {
-	        compile 'com.github.Jagerfield:Android-get-phone-book-contact-library:v2.0'
+	        compile 'com.github.Jagerfield:Mobile-Contacts-Library:v1.0'
 	}
   
     ```
