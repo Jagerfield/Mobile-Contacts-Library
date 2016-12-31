@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/App/App.iml" filepath="$PROJECT_DIR$/App/App.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ContactsImportLib/ContactsImportLib.iml" filepath="$PROJECT_DIR$/ContactsImportLib/ContactsImportLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MobileContactsLib/MobileContactsLib.iml" filepath="$PROJECT_DIR$/MobileContactsLib/MobileContactsLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/MobileContactsLibrary.iml" filepath="$PROJECT_DIR$/MobileContactsLibrary.iml" />
     </modules>
   </component>

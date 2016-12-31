@@ -1,1 +1,1 @@
-include ':App', ':ContactsImportLib'
+include ':App', ':MobileContactsLib'

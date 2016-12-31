@@ -9,7 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/App" />
-            <option value="$PROJECT_DIR$/ContactsImportLib" />
+            <option value="$PROJECT_DIR$/MobileContactsLib" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
