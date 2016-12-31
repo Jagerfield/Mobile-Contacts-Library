@@ -2,12 +2,11 @@ package jagerfield.mobilecontactslibrary.Utilities;
 
 import android.database.Cursor;
 import android.provider.ContactsContract;
-
 import jagerfield.mobilecontactslibrary.Abstracts.ElementParent;
 
 public class Utilities
 {
-    public static final String TAG_LIB = "TAG_LIB";
+    public static final String TAG_CONTACTS_LIB = "TAG_CONTACTS_LIB";
 
     public static String getColumnIndex(Cursor c, String column)
     {
