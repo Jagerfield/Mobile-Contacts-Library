@@ -1,4 +1,4 @@
-# Contacts Import Library 
+# Mobile Contacts Library
 
 This is a sample application to demonstrates the "ContactsImportLib", a well structured, fast, easy to use and to modify library for getting contacts from the mobile. The library uses the "ContentResolver".
 
