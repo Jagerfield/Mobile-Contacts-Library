@@ -4,9 +4,9 @@ This application demonstrates the "MobileContactsLib", The library uses the "Con
 
 Images from the app:
 
-<img src="https://github.com/Jagerfield/Android-get-phone-book-contact-library/blob/master/Snapshots/Screenshot_ContactList.png" width="240">
+<img src="https://github.com/Jagerfield/Mobile-Contacts-Library/blob/master/Snapshots/Screenshot_ContactList.png" width="240">
 
-<img src="https://github.com/Jagerfield/Android-get-phone-book-contact-library/blob/master/Snapshots/Screenshot_ContactDetails.png" width="240">
+<img src="https://github.com/Jagerfield/Mobile-Contacts-Library/blob/master/Snapshots/Screenshot_ContactDetails.png" width="240">
 
 ## Installation
 
@@ -88,4 +88,4 @@ In the app build.gradle add the following:
 
 This is a general diagram of the library's architectural design, and it only includes the numbers elements for clarity. 
 
-<img src="https://github.com/Jagerfield/Android-get-phone-book-contact-library/blob/master/Snapshots/ContactLib_UML.PNG" width="650">
+<img src="https://github.com/Jagerfield/Mobile-Contacts-Library/blob/master/Snapshots/ContactLib_UML.PNG" width="650">
