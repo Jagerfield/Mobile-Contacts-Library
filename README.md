@@ -31,7 +31,7 @@ Images from the sample app:
  
     ```java
     dependencies {
-	        compile 'com.github.Jagerfield:Android-get-phone-book-contact-library:v2.0'
+	        compile 'com.github.Jagerfield:Mobile-Contacts-Library:v1.0'
 	}
   
     ```
