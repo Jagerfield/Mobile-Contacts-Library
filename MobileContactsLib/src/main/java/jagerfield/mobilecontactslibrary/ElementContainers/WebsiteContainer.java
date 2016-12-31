@@ -2,7 +2,7 @@ package jagerfield.mobilecontactslibrary.ElementContainers;
 
 import android.database.Cursor;
 import jagerfield.mobilecontactslibrary.FieldElements.WebsiteElement.WebsiteElement;
-import jagerfield.mobilecontactslibrary.Utilities.Utility;
+import jagerfield.mobilecontactslibrary.Utilities.Utilities;
 import com.google.gson.annotations.Expose;
 
 import java.util.HashSet;
@@ -27,7 +27,7 @@ public class WebsiteContainer
 
     public String getWebsite()
     {
-        String result = Utility.elementValue(website);
+        String result = Utilities.elementValue(website);
         return result;
     }
 

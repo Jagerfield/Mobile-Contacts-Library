@@ -3,7 +3,7 @@ package jagerfield.mobilecontactslibrary.FieldElements.NickNameElement;
 import android.database.Cursor;
 import android.provider.ContactsContract;
 import jagerfield.mobilecontactslibrary.Abstracts.ElementParent;
-import jagerfield.mobilecontactslibrary.Utilities.Utility;
+import jagerfield.mobilecontactslibrary.Utilities.Utilities;
 import com.google.gson.annotations.Expose;
 
 public class NickNameTypeElement  extends ElementParent
@@ -38,7 +38,7 @@ public class NickNameTypeElement  extends ElementParent
             return;
         }
 
-        nickNameType = Utility.getNickNameType(Utility.getColumnIndex(cursor, column));
+        nickNameType = Utilities.getNickNameType(Utilities.getColumnIndex(cursor, column));
 
         if (nickNameType == null)
         {

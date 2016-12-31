@@ -3,7 +3,7 @@ package jagerfield.mobilecontactslibrary.ElementContainers;
 import android.database.Cursor;
 
 import jagerfield.mobilecontactslibrary.FieldElements.NoteElement.NoteElement;
-import jagerfield.mobilecontactslibrary.Utilities.Utility;
+import jagerfield.mobilecontactslibrary.Utilities.Utilities;
 import com.google.gson.annotations.Expose;
 
 import java.util.HashSet;
@@ -29,7 +29,7 @@ public class NoteContainer
 
     public String getNote()
     {
-        String result = Utility.elementValue(note);
+        String result = Utilities.elementValue(note);
         return result;
     }
 

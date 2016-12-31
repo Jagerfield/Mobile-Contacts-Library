@@ -3,7 +3,7 @@ package jagerfield.mobilecontactslibrary.FieldElements.AddressElement;
 import android.database.Cursor;
 import android.provider.ContactsContract;
 import jagerfield.mobilecontactslibrary.Abstracts.ElementParent;
-import jagerfield.mobilecontactslibrary.Utilities.Utility;
+import jagerfield.mobilecontactslibrary.Utilities.Utilities;
 import com.google.gson.annotations.Expose;
 
 public class AddressTypeElement extends ElementParent {
@@ -31,7 +31,7 @@ public class AddressTypeElement extends ElementParent {
             return;
         }
 
-        addressType = Utility.getAddressType(Utility.getColumnIndex(cursor, column));
+        addressType = Utilities.getAddressType(Utilities.getColumnIndex(cursor, column));
 
         if (addressType == null) {
             addressType = "OTHER";

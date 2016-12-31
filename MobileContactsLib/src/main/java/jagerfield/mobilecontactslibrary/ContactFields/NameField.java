@@ -7,7 +7,7 @@ import jagerfield.mobilecontactslibrary.Abstracts.FieldParent;
 import jagerfield.mobilecontactslibrary.FieldElements.NameElements.DisplaydNameElement;
 import jagerfield.mobilecontactslibrary.FieldElements.NameElements.FirstNameElement;
 import jagerfield.mobilecontactslibrary.FieldElements.NameElements.LastNameElement;
-import jagerfield.mobilecontactslibrary.Utilities.Utility;
+import jagerfield.mobilecontactslibrary.Utilities.Utilities;
 import com.google.gson.annotations.Expose;
 import java.util.HashSet;
 import java.util.Set;
@@ -45,19 +45,19 @@ public class NameField extends FieldParent {
 
     public String getDisplaydName()
     {
-        String result = Utility.elementValue(displaydName);
+        String result = Utilities.elementValue(displaydName);
         return result;
     }
 
     public String getFirstName()
     {
-        String result = Utility.elementValue(firstName);
+        String result = Utilities.elementValue(firstName);
         return result;
     }
 
     public String getLastName()
     {
-        String result = Utility.elementValue(lastName);
+        String result = Utilities.elementValue(lastName);
         return result;
     }
 

@@ -5,7 +5,7 @@ import android.database.Cursor;
 import jagerfield.mobilecontactslibrary.FieldElements.EventElements.EventLabelElement;
 import jagerfield.mobilecontactslibrary.FieldElements.EventElements.EventStartDateElement;
 import jagerfield.mobilecontactslibrary.FieldElements.EventElements.EventTypeElement;
-import jagerfield.mobilecontactslibrary.Utilities.Utility;
+import jagerfield.mobilecontactslibrary.Utilities.Utilities;
 import com.google.gson.annotations.Expose;
 import java.util.HashSet;
 import java.util.Set;
@@ -39,17 +39,17 @@ public class EventContainer
 
     public String getEventStartDate()
     {
-        String result = Utility.elementValue(startDate);
+        String result = Utilities.elementValue(startDate);
         return result;
     }
     public String getEventType()
     {
-        String result = Utility.elementValue(eventType);
+        String result = Utilities.elementValue(eventType);
         return result;
     }
     public String getEventLabel()
     {
-        String result = Utility.elementValue(eventLable);
+        String result = Utilities.elementValue(eventLable);
         return result;
     }
 }

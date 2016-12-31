@@ -5,7 +5,7 @@ import android.provider.ContactsContract;
 
 import jagerfield.mobilecontactslibrary.Abstracts.ElementParent;
 
-public class Utility
+public class Utilities
 {
     public static final String TAG_LIB = "TAG_LIB";
 

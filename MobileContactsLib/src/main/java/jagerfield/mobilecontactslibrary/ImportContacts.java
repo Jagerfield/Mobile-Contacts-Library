@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import jagerfield.mobilecontactslibrary.FieldContainer.FieldsContainer;
 import jagerfield.mobilecontactslibrary.Contact.Contact;
-import jagerfield.mobilecontactslibrary.Utilities.Utility;
+import jagerfield.mobilecontactslibrary.Utilities.Utilities;
 import utilities.lib.AppUtilities;
 
 import com.google.gson.annotations.Expose;
@@ -70,7 +70,7 @@ public class ImportContacts
         if (!flag)
         {
             Toast.makeText(activity, "Missing permission READ_CONTACTS", Toast.LENGTH_LONG).show();
-            Log.i(Utility.TAG_LIB, "Missing permission READ_CONTACTS");
+            Log.i(Utilities.TAG_LIB, "Missing permission READ_CONTACTS");
             return new ArrayList<Contact>();
         }
                 
@@ -91,7 +91,7 @@ public class ImportContacts
 
             while (cursor.moveToNext())
             {
-                id = Utility.getLong(cursor, ContactsContract.RawContacts.CONTACT_ID);
+                id = Utilities.getLong(cursor, ContactsContract.RawContacts.CONTACT_ID);
 
                 Contact contact = contactsIdMap.get(id);
                 if (contact==null)
@@ -103,7 +103,7 @@ public class ImportContacts
 
                 try
                 {
-                    photoUri = Utility.getColumnIndex(cursor, ContactsContract.Data.PHOTO_URI);
+                    photoUri = Utilities.getColumnIndex(cursor, ContactsContract.Data.PHOTO_URI);
                     if (photoUri != null && !photoUri.isEmpty())
                     {
                         contact.setPhotoUri(photoUri);
@@ -114,7 +114,7 @@ public class ImportContacts
                     photoUri = "";
                 }
 
-                columnIndex =  Utility.getColumnIndex(cursor, ContactsContract.Data.MIMETYPE);
+                columnIndex =  Utilities.getColumnIndex(cursor, ContactsContract.Data.MIMETYPE);
                 contact.execute(cursor, columnIndex);
             }
 

@@ -3,7 +3,7 @@ package jagerfield.mobilecontactslibrary.FieldElements.WebsiteElement;
 import android.database.Cursor;
 import android.provider.ContactsContract;
 import jagerfield.mobilecontactslibrary.Abstracts.ElementParent;
-import jagerfield.mobilecontactslibrary.Utilities.Utility;
+import jagerfield.mobilecontactslibrary.Utilities.Utilities;
 import com.google.gson.annotations.Expose;
 
 public class WebsiteElement extends ElementParent
@@ -37,7 +37,7 @@ public class WebsiteElement extends ElementParent
             return;
         }
 
-        website = Utility.getColumnIndex(cursor, column);
+        website = Utilities.getColumnIndex(cursor, column);
 
         if (website == null)
         {

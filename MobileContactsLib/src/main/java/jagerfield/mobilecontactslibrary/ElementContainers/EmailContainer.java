@@ -5,7 +5,7 @@ import android.database.Cursor;
 import jagerfield.mobilecontactslibrary.FieldElements.EmailElements.EmailElement;
 import jagerfield.mobilecontactslibrary.FieldElements.EmailElements.EmailLabelElement;
 import jagerfield.mobilecontactslibrary.FieldElements.EmailElements.EmailTypeElement;
-import jagerfield.mobilecontactslibrary.Utilities.Utility;
+import jagerfield.mobilecontactslibrary.Utilities.Utilities;
 import com.google.gson.annotations.Expose;
 import java.util.HashSet;
 import java.util.Set;
@@ -39,15 +39,15 @@ public class EmailContainer
 
     public String getEmail()
     {
-        String result = Utility.elementValue(email);
+        String result = Utilities.elementValue(email);
         return result;
     }
     public String getEmailType() {
-        String result = Utility.elementValue(emailType);
+        String result = Utilities.elementValue(emailType);
         return result;
     }
     public String getEmailLabel() {
-        String result = Utility.elementValue(emailLabel);
+        String result = Utilities.elementValue(emailLabel);
         return result;
     }
 }

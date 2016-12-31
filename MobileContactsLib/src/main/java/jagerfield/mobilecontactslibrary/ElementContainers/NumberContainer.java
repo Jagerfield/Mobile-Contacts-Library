@@ -6,7 +6,7 @@ import jagerfield.mobilecontactslibrary.FieldElements.NumberElements.LabelElemen
 import jagerfield.mobilecontactslibrary.FieldElements.NumberElements.NormNumElement;
 import jagerfield.mobilecontactslibrary.FieldElements.NumberElements.NumberElement;
 import jagerfield.mobilecontactslibrary.FieldElements.NumberElements.NumberTypeElement;
-import jagerfield.mobilecontactslibrary.Utilities.Utility;
+import jagerfield.mobilecontactslibrary.Utilities.Utilities;
 import com.google.gson.annotations.Expose;
 import java.util.HashSet;
 import java.util.Set;
@@ -40,22 +40,22 @@ public class NumberContainer
 
     public String elementValue() {
 
-        String result = Utility.elementValue(number);
+        String result = Utilities.elementValue(number);
         return result;
     }
     public String getNormalizedNumber() {
 
-        String result = Utility.elementValue(normalizedNumber);
+        String result = Utilities.elementValue(normalizedNumber);
         return result;
     }
     public String getNumlabel() {
 
-        String result = Utility.elementValue(numLabel);
+        String result = Utilities.elementValue(numLabel);
         return result;
     }
     public String getNumType() {
 
-        String result = Utility.elementValue(numType);
+        String result = Utilities.elementValue(numType);
         return result;
     }
 

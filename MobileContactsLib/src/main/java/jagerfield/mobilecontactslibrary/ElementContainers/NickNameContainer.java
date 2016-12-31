@@ -4,7 +4,7 @@ import android.database.Cursor;
 
 import jagerfield.mobilecontactslibrary.FieldElements.NickNameElement.NickNameElement;
 import jagerfield.mobilecontactslibrary.FieldElements.NickNameElement.NickNameTypeElement;
-import jagerfield.mobilecontactslibrary.Utilities.Utility;
+import jagerfield.mobilecontactslibrary.Utilities.Utilities;
 import com.google.gson.annotations.Expose;
 import java.util.HashSet;
 import java.util.Set;
@@ -34,12 +34,12 @@ public class NickNameContainer
 
     public String getNickName()
     {
-        String result = Utility.elementValue(nickName);
+        String result = Utilities.elementValue(nickName);
         return result;
     }
     public String getNickNameType()
     {
-        String result = Utility.elementValue(nickNameType);
+        String result = Utilities.elementValue(nickNameType);
         return result;
     }
 

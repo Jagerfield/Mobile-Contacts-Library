@@ -3,7 +3,7 @@ package jagerfield.mobilecontactslibrary.FieldElements.EmailElements;
 import android.database.Cursor;
 import android.provider.ContactsContract;
 import jagerfield.mobilecontactslibrary.Abstracts.ElementParent;
-import jagerfield.mobilecontactslibrary.Utilities.Utility;
+import jagerfield.mobilecontactslibrary.Utilities.Utilities;
 import com.google.gson.annotations.Expose;
 
 public class EmailElement extends ElementParent
@@ -37,7 +37,7 @@ public class EmailElement extends ElementParent
             return;
         }
 
-        email = Utility.getColumnIndex(cursor, column);
+        email = Utilities.getColumnIndex(cursor, column);
 
         if (email == null)
         {

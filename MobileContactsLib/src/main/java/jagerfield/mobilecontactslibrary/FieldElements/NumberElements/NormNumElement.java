@@ -3,7 +3,7 @@ package jagerfield.mobilecontactslibrary.FieldElements.NumberElements;
 import android.database.Cursor;
 import android.provider.ContactsContract;
 import jagerfield.mobilecontactslibrary.Abstracts.ElementParent;
-import jagerfield.mobilecontactslibrary.Utilities.Utility;
+import jagerfield.mobilecontactslibrary.Utilities.Utilities;
 import com.google.gson.annotations.Expose;
 
 public class NormNumElement extends ElementParent
@@ -39,7 +39,7 @@ public class NormNumElement extends ElementParent
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN)
         {
-            normalizedNumber = Utility.getColumnIndex(cursor, column);
+            normalizedNumber = Utilities.getColumnIndex(cursor, column);
         }
 
         if (normalizedNumber == null)

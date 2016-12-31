@@ -4,7 +4,7 @@ import android.database.Cursor;
 
 import jagerfield.mobilecontactslibrary.FieldElements.AddressElement.AddressElement;
 import jagerfield.mobilecontactslibrary.FieldElements.AddressElement.AddressTypeElement;
-import jagerfield.mobilecontactslibrary.Utilities.Utility;
+import jagerfield.mobilecontactslibrary.Utilities.Utilities;
 import com.google.gson.annotations.Expose;
 import java.util.HashSet;
 import java.util.Set;
@@ -32,12 +32,12 @@ public class AddressContainer
     }
 
     public String getAddress() {
-        String result = Utility.elementValue(address);
+        String result = Utilities.elementValue(address);
         return result;
     }
     public String getAddressType()
     {
-        String result = Utility.elementValue(addressType);
+        String result = Utilities.elementValue(addressType);
         return result;
     }
 
