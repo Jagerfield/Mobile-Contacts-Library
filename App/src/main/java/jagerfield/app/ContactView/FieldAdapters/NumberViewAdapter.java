@@ -8,8 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import jagerfield.mobilecontactslibrary.ElementContainers.NumberContainer;
 import jagerfield.mobilecontactslibrary.Contact.Contact;
-import com.example.sense.mobilecontactslibrary.R;
-
+import jagerfield.mobilecontactslibrary.R;
 import java.util.LinkedList;
 
 public class NumberViewAdapter extends RecyclerView.Adapter<NumberViewAdapter.ViewHolder> {

@@ -7,8 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import jagerfield.mobilecontactslibrary.ElementContainers.NoteContainer;
-import com.example.sense.mobilecontactslibrary.R;
-
+import jagerfield.mobilecontactslibrary.R;
 import java.util.LinkedList;
 
 

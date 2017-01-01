@@ -6,12 +6,10 @@ import android.database.Cursor;
 import android.provider.ContactsContract;
 import android.util.Log;
 import android.widget.Toast;
-
 import jagerfield.mobilecontactslibrary.FieldContainer.FieldsContainer;
 import jagerfield.mobilecontactslibrary.Contact.Contact;
 import jagerfield.mobilecontactslibrary.Utilities.Utilities;
 import utilities.lib.AppUtilities;
-
 import com.google.gson.annotations.Expose;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -122,7 +120,7 @@ public class ImportContacts
 
         if (contacts.isEmpty())
         {
-            Toast.makeText(activity, "No contacts found", Toast.LENGTH_LONG).show();
+//            Toast.makeText(activity, "No contacts found", Toast.LENGTH_LONG).show();
         }
 
         return contacts;

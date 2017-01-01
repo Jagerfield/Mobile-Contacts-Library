@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.sense.mobilecontactslibrary"
+    package="jagerfield.mobilecontactslibrary"
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -25,7 +25,8 @@
             android:name="jagerfield.app.ContactView.DisplayContactActivity"
             android:label="@string/title_activity_display_contact"
             android:parentActivityName="jagerfield.app.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="jagerfield.app.MainActivity" />

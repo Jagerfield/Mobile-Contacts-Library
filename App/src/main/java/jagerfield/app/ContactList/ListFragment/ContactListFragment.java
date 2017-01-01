@@ -11,18 +11,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.bumptech.glide.Glide;
 import jagerfield.mobilecontactslibrary.ImportContacts;
 import jagerfield.mobilecontactslibrary.Contact.Contact;
 import jagerfield.app.ContactView.DisplayContactActivity;
-import com.example.sense.mobilecontactslibrary.R;
 import jagerfield.app.Utilities.C;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 import java.util.ArrayList;
-
+import jagerfield.mobilecontactslibrary.R;
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
 public class ContactListFragment extends Fragment {
