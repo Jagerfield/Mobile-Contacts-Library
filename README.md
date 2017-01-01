@@ -14,26 +14,24 @@ In the app manifest file add this permission:
 
   ```
   <uses-permission android:name="android.permission.READ_CONTACTS" />
- 
   ``` 
 In the app build.gradle add the following:
 
   a. Add JitPack repository at the end of repositories 
 
-    ```
+```
     repositories {
       maven { url 'https://jitpack.io' }
     }
-
-    ```
+ ```
+ 
   b. Then add this dependency
  
-    ```
+```
     dependencies {
 	        compile 'com.github.Jagerfield:Mobile-Contacts-Library:v1.2'
 	}
-  
-    ```
+```
 
 ## How to use?
 
