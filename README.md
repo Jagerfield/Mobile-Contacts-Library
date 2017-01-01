@@ -2,20 +2,14 @@
 
 This application demonstrates the "MobileContactsLib", The library uses the "ContentResolver", it is a well structured, fast, easy to use and easy to modify library for getting contacts from the mobile. This library requires minimum SDK 15.
 
-This app uses the **Android Utilities Library** library to manage permissions:
-
-<a href='https://github.com/Jagerfield/Android-Utilities-Library'><img alt='Android Utilities Library' src="https://github.com/Jagerfield/Mobile-Contacts-Library/blob/master/Snapshots/Octocat.png" width="80"/></a> &#160; <a href='https://play.google.com/store/apps/details?id=jagerfield.utilities'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="183" height="75"/></a>
-
 Images from the app:
 
 <img src="https://github.com/Jagerfield/Mobile-Contacts-Library/blob/master/Snapshots/Screenshot_ContactList.png" width="240"/> &#160;
 <img src="https://github.com/Jagerfield/Mobile-Contacts-Library/blob/master/Snapshots/Screenshot_ContactDetails.png" width="240"/>
 
-## Apps using this library
+The sample app for Android Utilities Library is available on Google Play:
 
-**Dropbøx Contact Sharing Manager**
-
-<a href='https://play.google.com/store/apps/details?id=jagerfield.dcm'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="183" height="75"/></a>
+<a href='https://play.google.com/store/apps/details?id=jagerfield.mobilecontactslibrar'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="150" height="60"/></a>
 
 ## Installation
 
@@ -95,3 +89,12 @@ In the app build.gradle add the following:
 This is a general diagram of the library's architectural design, and it only includes the numbers elements for clarity. 
 
 <img src="https://github.com/Jagerfield/Mobile-Contacts-Library/blob/master/Snapshots/ContactLib_UML.PNG" width="650">
+
+## Apps using the library
+ An earlier version of this library is used in **Dropbøx Contact Sharing Manager**
+
+<a href='https://play.google.com/store/apps/details?id=jagerfield.dcm'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="150" height="60"/></a>
+
+The **Mobile Contact Library** uses the **Android Utilities Library** to manage permissions:
+
+<a href='https://github.com/Jagerfield/Android-Utilities-Library'><img alt='Android Utilities Library' src="https://github.com/Jagerfield/Mobile-Contacts-Library/blob/master/Snapshots/Octocat.png" width="80"/></a> &#160; <a href='https://play.google.com/store/apps/details?id=jagerfield.utilities'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="150" height="60"/></a>
