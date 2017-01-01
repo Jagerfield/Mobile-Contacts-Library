@@ -12,7 +12,7 @@ Images from the app:
 
 In the app manifest file add this permission: 
 
-  ```java
+  ```
   <uses-permission android:name="android.permission.READ_CONTACTS" />
  
   ``` 
@@ -20,7 +20,7 @@ In the app build.gradle add the following:
 
   a. Add JitPack repository at the end of repositories 
 
-    ```java
+    ```
     repositories {
       maven { url 'https://jitpack.io' }
     }
@@ -28,7 +28,7 @@ In the app build.gradle add the following:
     ```
   b. Then add this dependency
  
-    ```java
+    ```
     dependencies {
 	        compile 'com.github.Jagerfield:Mobile-Contacts-Library:v1.2'
 	}
@@ -40,7 +40,7 @@ In the app build.gradle add the following:
 1. After instaling the library, declare and instantiate an object of type "ImportContacts" class with "context" as an argument.
 2. Call the getContacts() method to get all the contacts.
 
-  ```java
+  ```
   /**
    * Declare and instantiate an object of the "ImportContacts" class
    */
@@ -81,7 +81,6 @@ In the app build.gradle add the following:
   8. Address:
     a. Address
     b. Addresstype
-  
   ```
 
 ## UML Diagram
