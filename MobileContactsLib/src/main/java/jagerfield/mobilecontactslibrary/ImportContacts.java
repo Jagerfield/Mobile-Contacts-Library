@@ -9,7 +9,8 @@ import android.widget.Toast;
 import jagerfield.mobilecontactslibrary.FieldContainer.FieldsContainer;
 import jagerfield.mobilecontactslibrary.Contact.Contact;
 import jagerfield.mobilecontactslibrary.Utilities.Utilities;
-import utilities.lib.AppUtilities;
+import jagerfield.utilities.lib.AppUtilities;
+
 import com.google.gson.annotations.Expose;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -63,11 +64,11 @@ public class ImportContacts
 
     public ArrayList<Contact> getMobileContacts()
     {
-        boolean flag = AppUtilities.getPermissionUtil(activity).isPermissionGranted(Manifest.permission.READ_CONTACTS);
+        boolean flag = AppUtilities.getPermissionUtil(activity).isPermissionGranted(Manifest.permission.READ_CONTACTS).isGranted();
 
         if (!flag)
         {
-            Log.i(Utilities.TAG_CONTACTS_LIB, "Missing permission READ_CONTACTS");
+            Log.i(Utilities.TAG_LIB, "Missing permission READ_CONTACTS");
             return new ArrayList<Contact>();
         }
                 
@@ -120,7 +121,7 @@ public class ImportContacts
 
         if (contacts.isEmpty())
         {
-//            Toast.makeText(activity, "No contacts found", Toast.LENGTH_LONG).show();
+            Log.i(Utilities.TAG_LIB, "Lib: No contacts found");
         }
 
         return contacts;

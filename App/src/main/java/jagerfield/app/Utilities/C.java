@@ -3,11 +3,11 @@ package jagerfield.app.Utilities;
 import android.graphics.Bitmap;
 import android.support.v7.graphics.Palette;
 
-
 public class C
 {
     public static final String CONTACT = "CONTACT";
     public static final String TAG_LIB = "TAG_LIB";
+    public static final String REQUIRED_PERMISSION = "android.permission.READ_CONTACTS";
 
     public static final int LIGHT_VIBRANT= 1;
     public static final int VIBRANT= 2;
