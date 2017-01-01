@@ -4,17 +4,13 @@ This application demonstrates the "MobileContactsLib", The library uses the "Con
 
 Images from the app:
 
-<img src="https://github.com/Jagerfield/Mobile-Contacts-Library/blob/master/Snapshots/Screenshot_ContactList.png" width="240">
-
+<img src="https://github.com/Jagerfield/Mobile-Contacts-Library/blob/master/Snapshots/Screenshot_ContactList.png" width="240"> &#160;
 <img src="https://github.com/Jagerfield/Mobile-Contacts-Library/blob/master/Snapshots/Screenshot_ContactDetails.png" width="240">
-
 
 ## Apps using this library
 
 **Dropbøx Contact Sharing Manager**
-
 <a href='https://play.google.com/store/apps/details?id=jagerfield.dcm'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="193" height="75"/></a>
-
 
 ## Installation
 
