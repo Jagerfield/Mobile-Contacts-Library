@@ -6,9 +6,8 @@ import android.support.v7.graphics.Palette;
 
 public class C
 {
-    public static final String CONTACTLIST = "CONTACTLIST";
-    public static final String POSITION = "POSITION";
     public static final String CONTACT = "CONTACT";
+    public static final String TAG_LIB = "TAG_LIB";
 
     public static final int LIGHT_VIBRANT= 1;
     public static final int VIBRANT= 2;
