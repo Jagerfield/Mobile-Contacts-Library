@@ -9,7 +9,7 @@ Images from the app:
 
 The sample app for Android Utilities Library is available on Google Play:
 
-<a href='https://play.google.com/store/apps/details?id=jagerfield.mobilecontactslibrar'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="150" height="60"/></a>
+<a href='https://play.google.com/store/apps/details?id=jagerfield.mobilecontactslibrary'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="150" height="60"/></a>
 
 ## Installation
 
