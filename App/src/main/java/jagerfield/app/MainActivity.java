@@ -90,7 +90,21 @@ public class MainActivity extends AppCompatActivity {
                 String deniedPermissions = TextUtils.join(", ", result.getUserDeniedPermissionsList()).trim();
                 String neverAskAgainPermissions = TextUtils.join(", ", result.getNeverAskAgainPermissionsList()).trim();
 
-                String missingPermissions = deniedPermissions.isEmpty()? deniedPermissions : deniedPermissions + ", ";
+                String missingPermissions = "";
+
+                if (!deniedPermissions.isEmpty())
+                {
+                    if (!neverAskAgainPermissions.isEmpty())
+                    {
+                        neverAskAgainPermissions = ", " + neverAskAgainPermissions;
+                    }
+
+                    missingPermissions = deniedPermissions + neverAskAgainPermissions;
+                }
+                else
+                {
+                    missingPermissions = neverAskAgainPermissions;
+                }
 
                 Toast.makeText(this, "Following permissions are missing : " + missingPermissions, Toast.LENGTH_LONG).show();
                 Log.e(C.TAG_LIB, "Following permissions are missing : " + missingPermissions);
