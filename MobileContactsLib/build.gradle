@@ -9,8 +9,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 5
-        versionName "1.4"
+        versionCode 6
+        versionName "1.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
@@ -34,5 +34,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
     compile 'com.google.code.gson:gson:2.3.1'
-    compile 'com.github.Jagerfield:Android-Utilities-Library:v1.8'
+    compile 'com.github.Jagerfield:Android-Utilities-library:v2.1'
 }

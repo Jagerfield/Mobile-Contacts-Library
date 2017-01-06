@@ -7,8 +7,8 @@ android {
         applicationId "jagerfield.mobilecontactslibrary"
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 5
-        versionName "1.4"
+        versionCode 6
+        versionName "1.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -39,7 +39,7 @@ dependencies {
     compile 'com.android.support:design:24.2.1'
     compile 'com.android.support:cardview-v7:24.2.1'
     compile 'com.android.support:palette-v7:24.2.1'
-    compile 'com.github.Jagerfield:Android-Utilities-Library:v1.8'
+    compile 'com.github.Jagerfield:Android-Utilities-library:v2.1'
 
     testCompile 'junit:junit:4.12'
 }

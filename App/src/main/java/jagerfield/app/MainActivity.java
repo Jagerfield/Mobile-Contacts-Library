@@ -10,6 +10,7 @@ import jagerfield.app.ContactList.ListFragment.ContactListFragment;
 import jagerfield.app.Utilities.C;
 import jagerfield.mobilecontactslibrary.R;
 import jagerfield.utilities.lib.AppUtilities;
+import jagerfield.utilities.lib.PermissionsUtil.GuiDialog.PermissionsManager;
 import jagerfield.utilities.lib.PermissionsUtil.PermissionsUtil;
 import jagerfield.utilities.lib.PermissionsUtil.Results.IGetPermissionResult;
 
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 .add(R.id.root_container, new ContactListFragment())
                 .commit();
     }
+
 
     private void checkPermission()
     {
@@ -64,52 +66,89 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults)
     {
-        PermissionsUtil permissionsUtil = AppUtilities.getPermissionUtil(MainActivity.this);
+        PermissionsUtil permissionsUtil = AppUtilities.getPermissionUtil(this);
 
         if (requestCode == permissionsUtil.getPermissionsReqCodeId())
         {
             IGetPermissionResult result = null;
-            result = permissionsUtil.getPermissionResults(C.REQUIRED_PERMISSION);
-            if (result == null)
-            {
-                return;
-            }
+            result = permissionsUtil.getPermissionResults(permissions);
 
             if (result.isGranted())
             {
                 launchFragment();
-            }
-            else
-            {
-                /**
-                 * For SDK >= M, there are permissions missing
-                 */
-                String deniedPermissions = TextUtils.join(", ", result.getUserDeniedPermissionsList()).trim();
-                String neverAskAgainPermissions = TextUtils.join(", ", result.getNeverAskAgainPermissionsList()).trim();
-
-                String missingPermissions = "";
-
-                if (!deniedPermissions.isEmpty())
-                {
-                    if (!neverAskAgainPermissions.isEmpty())
-                    {
-                        neverAskAgainPermissions = ", " + neverAskAgainPermissions;
-                    }
-
-                    missingPermissions = deniedPermissions + neverAskAgainPermissions;
-                }
-                else
-                {
-                    missingPermissions = neverAskAgainPermissions;
-                }
-
-                Toast.makeText(this, "Following permissions are missing : " + missingPermissions, Toast.LENGTH_LONG).show();
-                Log.e(C.TAG_LIB, "Following permissions are missing : " + missingPermissions);
                 return;
             }
+
+            PermissionsManager.getNewInstance(this, result, permissions, new PermissionsManager.PermissionsManagerCallback()
+            {
+                @Override
+                public void onPermissionsGranted(IGetPermissionResult result) {
+
+                    /**
+                     * User accepted all requested permissions
+                     */
+                    launchFragment();
+                }
+
+                @Override
+                public void onPermissionsMissing(IGetPermissionResult result)
+                {
+                    Toast.makeText(MainActivity.this, "User didn't accept all permissions", Toast.LENGTH_LONG).show();
+                }
+            });
         }
     }
+
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults)
+//    {
+//        PermissionsUtil permissionsUtil = AppUtilities.getPermissionUtil(MainActivity.this);
+//
+//        if (requestCode == permissionsUtil.getPermissionsReqCodeId())
+//        {
+//            IGetPermissionResult result = null;
+//            result = permissionsUtil.getPermissionResults(C.REQUIRED_PERMISSION);
+//            if (result == null)
+//            {
+//                return;
+//            }
+//
+//            if (result.isGranted())
+//            {
+//                launchFragment();
+//            }
+//            else
+//            {
+//                /**
+//                 * For SDK >= M, there are permissions missing
+//                 */
+//                String deniedPermissions = TextUtils.join(", ", result.getUserDeniedPermissionsList()).trim();
+//                String neverAskAgainPermissions = TextUtils.join(", ", result.getNeverAskAgainPermissionsList()).trim();
+//
+//                String missingPermissions = "";
+//
+//                if (!deniedPermissions.isEmpty())
+//                {
+//                    if (!neverAskAgainPermissions.isEmpty())
+//                    {
+//                        neverAskAgainPermissions = ", " + neverAskAgainPermissions;
+//                    }
+//
+//                    missingPermissions = deniedPermissions + neverAskAgainPermissions;
+//                }
+//                else
+//                {
+//                    missingPermissions = neverAskAgainPermissions;
+//                }
+//
+//                Toast.makeText(this, "Following permissions are missing : " + missingPermissions, Toast.LENGTH_LONG).show();
+//                Log.e(C.TAG_LIB, "Following permissions are missing : " + missingPermissions);
+//                return;
+//            }
+//        }
+//    }
 }
