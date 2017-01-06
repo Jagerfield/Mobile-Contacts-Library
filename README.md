@@ -98,3 +98,10 @@ This is a general diagram of the library's architectural design, and it only inc
 The **Mobile Contact Library** uses the **Android Utilities Library** to manage permissions:
 
 <a href='https://github.com/Jagerfield/Android-Utilities-Library'><img alt='Android Utilities Library' src="https://github.com/Jagerfield/Mobile-Contacts-Library/blob/master/Snapshots/Octocat.png" width="65"/></a> &#160; <a href='https://play.google.com/store/apps/details?id=jagerfield.utilities'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="150" height="60"/></a>
+
+
+## Privacy Policy
+
+This app sample will request the follwoing permission below which require user approval and is used for demonstration purposes only. No data is used or shared.
+
+* android.permission.READ_CONTACTS
