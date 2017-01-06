@@ -102,6 +102,6 @@ The **Mobile Contact Library** uses the **Android Utilities Library** to manage 
 
 ## Privacy Policy
 
-This app sample will request the follwoing permission below which require user approval and is used for demonstration purposes only. No data is used or shared.
+This app sample will request the follwoing permission below which require user approval and is used for demonstration purposes only. No data is shared or used outside this app.
 
 * android.permission.READ_CONTACTS
