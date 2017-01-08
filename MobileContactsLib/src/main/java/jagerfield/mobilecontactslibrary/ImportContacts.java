@@ -2,15 +2,14 @@ package jagerfield.mobilecontactslibrary;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.os.Build;
 import android.provider.ContactsContract;
 import android.util.Log;
-import android.widget.Toast;
 import jagerfield.mobilecontactslibrary.FieldContainer.FieldsContainer;
 import jagerfield.mobilecontactslibrary.Contact.Contact;
 import jagerfield.mobilecontactslibrary.Utilities.Utilities;
-import jagerfield.utilities.lib.AppUtilities;
-
 import com.google.gson.annotations.Expose;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -64,7 +63,7 @@ public class ImportContacts
 
     public ArrayList<Contact> getMobileContacts()
     {
-        boolean flag = AppUtilities.getPermissionUtil(activity).isPermissionGranted(Manifest.permission.READ_CONTACTS).isGranted();
+        boolean flag = hasPermission(Manifest.permission.READ_CONTACTS);
 
         if (!flag)
         {
@@ -125,6 +124,37 @@ public class ImportContacts
         }
 
         return contacts;
+    }
+
+    public synchronized boolean hasPermission(String permission)
+    {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M)
+        {
+            return true;
+        }
+
+        if (permission==null || permission.isEmpty())
+        {
+
+            return false;
+        }
+
+        String[] permissionsArray = {permission};
+
+        for (int i = 0; i < permissionsArray.length; i++)
+        {
+            if (activity.checkSelfPermission(permissionsArray[i]) == PackageManager.PERMISSION_DENIED)
+            {
+                Log.w(Utilities.TAG_LIB, permission + " permission is missing.");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
 }
