@@ -32,7 +32,7 @@ In the app build.gradle add the following:
  
 ```
     dependencies {
-	        compile 'com.github.Jagerfield:Mobile-Contacts-Library:v1.5'
+	        compile 'com.github.Jagerfield:Mobile-Contacts-Library:v1.6'
 	}
 ```
 
