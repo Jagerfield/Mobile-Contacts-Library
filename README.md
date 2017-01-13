@@ -7,6 +7,12 @@ Images from the app:
 <img src="https://github.com/Jagerfield/Mobile-Contacts-Library/blob/master/Snapshots/Screenshot_ContactList.png" width="240"/> &#160;
 <img src="https://github.com/Jagerfield/Mobile-Contacts-Library/blob/master/Snapshots/Screenshot_ContactDetails.png" width="240"/>
 
+
+The demo app for this library is available on Google Play:
+
+<a href='https://play.google.com/store/apps/details?id=jagerfield.mobilecontactslibrary'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="150" height="60"/></a>
+
+
 ## Installation
 
 In the app manifest file add this permission: 
