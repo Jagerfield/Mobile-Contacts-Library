@@ -34,25 +34,38 @@ In the app build.gradle add the following:
  
 ```
     dependencies {
-	        compile 'com.github.Jagerfield:Mobile-Contacts-Library:v1.6'
+	        compile 'com.github.Jagerfield:Mobile-Contacts-Library:v1.7'
 	}
 ```
 
 ## How to use?
-
-1. After instaling the library, declare and instantiate an object of type "ImportContacts" class with "context" as an argument.
-2. Call the getContacts() method to get all the contacts.
-
+There are two ways to implement this library:
+A- Direct implementation on th emain thread. The library is fast and I didn't ntice any delays.
+  1. After instaling the library, declare and instantiate an object of type "ImportContacts" class with "context" as an argument.
+  2. Call the getContacts() method to get all the contacts.
+  
   ```
-  /**
-   * Declare and instantiate an object of the "ImportContacts" class
-   */
-    ImportContacts importContacts = new ImportContacts(context);
+    /**
+     * Declare and instantiate an object of the "ImportContacts" class
+     */
+      ImportContacts importContacts = new ImportContacts(context);
 
-  /**
-   * Fetch mobile contacts list
-   */
-    ArrayList<Contact> listItem = importContacts.getContacts();
+    /**
+     * Fetch mobile contacts list
+     */
+      ArrayList<Contact> listItem = importContacts.getContacts();   
+  ```
+  B- From version 1.7, you can fetch contacts using through an Async call.
+  
+  ```
+    new ImportContactsAsync(activity, new ImportContactsAsync.ICallback()
+            {
+                @Override
+                public void mobileContacts(ArrayList<Contact> contactList)
+                {
+                    //Your code here
+                }
+            }).execute();
   ```
 
 ## Available Contact elements:
