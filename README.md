@@ -39,8 +39,7 @@ In the app build.gradle add the following:
 ```
 
 ## How to use?
-There are two ways to implement this library:
-A- Direct implementation on th emain thread. The library is fast and I didn't ntice any delays.
+There are two ways to implement this library, the first method is to directly implement it on the main-thread. The library is fast and I didn't ntice any delays.
   1. After instaling the library, declare and instantiate an object of type "ImportContacts" class with "context" as an argument.
   2. Call the getContacts() method to get all the contacts.
   
@@ -55,7 +54,7 @@ A- Direct implementation on th emain thread. The library is fast and I didn't nt
      */
       ArrayList<Contact> listItem = importContacts.getContacts();   
   ```
-  B- From version 1.7, you can fetch contacts using through an Async call.
+From version 1.7, you can fetch contacts through an Async call.
   
   ```
     new ImportContactsAsync(activity, new ImportContactsAsync.ICallback()
