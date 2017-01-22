@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.bumptech.glide.Glide;
 import jagerfield.mobilecontactslibrary.ImportContacts;
 import jagerfield.mobilecontactslibrary.Contact.Contact;
@@ -22,11 +21,15 @@ import jagerfield.app.Utilities.C;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.util.ArrayList;
+
+import jagerfield.mobilecontactslibrary.ImportContactsAsync;
 import jagerfield.mobilecontactslibrary.R;
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
-public class ContactListFragment extends Fragment {
-
+public class ContactListFragment extends Fragment
+{
+    private ContactListFragment contactListFragment;
+    private RecyclerView recyclerView;
     public ContactListFragment()
     {}
 
@@ -40,28 +43,43 @@ public class ContactListFragment extends Fragment {
             /**
              * Create and instantiate an object of the ImportContacts library
              */
-            ImportContacts importContacts = new ImportContacts(getActivity());
+//            ImportContacts importContacts = new ImportContacts(getActivity());
 
             /**
              * Fetch mobile contacts
              */
-            ArrayList<Contact> listItem = importContacts.getContacts();
+//            ArrayList<Contact> listItem = importContacts.getContacts();
 
-            if(listItem==null)
-            {
-                listItem = new ArrayList<Contact>() ;
-                Log.i(C.TAG_LIB, "Error in retrieving contacts");
-            }
-
-            if(listItem.isEmpty())
-            {
-                Toast.makeText(getActivity(), "No contacts found", Toast.LENGTH_LONG).show();
-            }
 
             Context context = view.getContext();
-            RecyclerView recyclerView = (RecyclerView) view;
+            recyclerView = (RecyclerView) view;
             recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            recyclerView.setAdapter(new ContactListViewAdapter(this, listItem));
+
+            contactListFragment = this;
+
+            new ImportContactsAsync(getActivity(), new ImportContactsAsync.ICallback()
+            {
+//                ArrayList<Contact> list;
+                @Override
+                public void mobileContacts(ArrayList<Contact> contactList)
+                {
+                    ArrayList<Contact> listItem = contactList;
+
+                    if(listItem==null)
+                    {
+                        listItem = new ArrayList<Contact>() ;
+                        Log.i(C.TAG_LIB, "Error in retrieving contacts");
+                    }
+
+                    if(listItem.isEmpty())
+                    {
+                        Toast.makeText(getActivity(), "No contacts found", Toast.LENGTH_LONG).show();
+                    }
+
+                    recyclerView.setAdapter(new ContactListViewAdapter(contactListFragment, listItem));
+                }
+            }).execute();
+
         }
 
         return view;

@@ -16,11 +16,11 @@ import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Set;
 
-
 public class ImportContacts
 {
     private Activity activity;
     private LinkedHashMap<Long, Contact> contactsIdMap;
+
     @Expose
     private ArrayList<Contact> contacts;
 

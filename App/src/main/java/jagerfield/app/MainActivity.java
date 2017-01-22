@@ -14,7 +14,6 @@ import jagerfield.utilities.lib.PermissionsUtil.GuiDialog.PermissionsManager;
 import jagerfield.utilities.lib.PermissionsUtil.PermissionsUtil;
 import jagerfield.utilities.lib.PermissionsUtil.Results.IGetPermissionResult;
 
-
 public class MainActivity extends AppCompatActivity {
     private static final int READ_CONTACT_PERMISSION_REQUEST_CODE = 76;
 
@@ -36,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
                 .add(R.id.root_container, new ContactListFragment())
                 .commit();
     }
-
 
     private void checkPermission()
     {
