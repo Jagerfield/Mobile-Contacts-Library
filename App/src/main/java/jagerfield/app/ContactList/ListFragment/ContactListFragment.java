@@ -14,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.bumptech.glide.Glide;
-import jagerfield.mobilecontactslibrary.ImportContacts;
 import jagerfield.mobilecontactslibrary.Contact.Contact;
 import jagerfield.app.ContactView.DisplayContactActivity;
 import jagerfield.app.Utilities.C;
@@ -40,17 +39,6 @@ public class ContactListFragment extends Fragment
 
         if (view instanceof RecyclerView)
         {
-            /**
-             * Create and instantiate an object of the ImportContacts library
-             */
-//            ImportContacts importContacts = new ImportContacts(getActivity());
-
-            /**
-             * Fetch mobile contacts
-             */
-//            ArrayList<Contact> listItem = importContacts.getContacts();
-
-
             Context context = view.getContext();
             recyclerView = (RecyclerView) view;
             recyclerView.setLayoutManager(new LinearLayoutManager(context));
@@ -59,7 +47,6 @@ public class ContactListFragment extends Fragment
 
             new ImportContactsAsync(getActivity(), new ImportContactsAsync.ICallback()
             {
-//                ArrayList<Contact> list;
                 @Override
                 public void mobileContacts(ArrayList<Contact> contactList)
                 {
@@ -79,9 +66,7 @@ public class ContactListFragment extends Fragment
                     recyclerView.setAdapter(new ContactListViewAdapter(contactListFragment, listItem));
                 }
             }).execute();
-
         }
-
         return view;
     }
 
