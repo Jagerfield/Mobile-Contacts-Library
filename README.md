@@ -105,7 +105,7 @@ This is a general diagram of the library's architectural design, and it only inc
 <img src="https://github.com/Jagerfield/Mobile-Contacts-Library/blob/master/Snapshots/ContactLib_UML.PNG" width="650">
 
 ## Apps using the library
- An earlier version of this library is used in **Dropbøx Contact Sharing Manager**
+ A version of this library is used in **Data & Contacts Sharing Mgr**
 
 <a href='https://play.google.com/store/apps/details?id=jagerfield.dcm'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="150" height="60"/></a>
 
