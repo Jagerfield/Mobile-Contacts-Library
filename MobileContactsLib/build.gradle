@@ -3,14 +3,14 @@ apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.Jagerfield'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.3"
+    compileSdkVersion 28
+    //buildToolsVersion "24.0.3"
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 24
-        versionCode 7
-        versionName "1.7"
+        targetSdkVersion 28
+        versionCode 10
+        versionName "5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
@@ -27,12 +27,12 @@ repositories {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    testCompile 'junit:junit:4.12'
-    compile 'com.google.code.gson:gson:2.3.1'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.google.code.gson:gson:2.3.1'
 
 }
